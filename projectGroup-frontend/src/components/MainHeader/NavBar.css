@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,900&family=Roboto+Slab:wght@900&display=swap');
+
+/* .header{
+    kborder: 2px solid #214168;
+} */
+
+.logo a{
+    font-size: 55px;
+    color: #5e8dce;
+    font-weight: 900;
+    /* xfont-style: italic; */
+    font-family: 'Roboto Slab', serif;
+    transition: 0.3s;
+    
+}
+
+.logo a:hover{
+    color:#325FA0;
+}
+
+.sign-in {
+    border: 2px solid #325FA0;
+    padding: 15px;
+    text-align: center;
+    width: 10%;
+    height: fit-content;
+    border-radius: 8px;
+    margin-top: 3px;
+    margin-left: 50px; 
+}
+
+.sign-in a{
+    /* xpadding: 10px; */
+    height: fit-content;
+}
+
+.sign-in:hover{
+    background-color: #325FA0;
+}
+
+.sign-in a:hover{
+   color: #F4F0E9;
+}
+
+.username {
+    /* border: 2px solid #325FA0; */
+    color: #325FA0;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 15px;
+    text-align: center;
+    width: 10%;
+    height: fit-content;
+    /* border-radius: 8px; */
+    margin-top: 3px;
+    margin-left: 50px; 
+}

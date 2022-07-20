@@ -1,0 +1,36 @@
+img {
+    width: 50%;
+}
+
+.cards {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    /* mmborder-radius: 10px; */
+    border-width: 1px;
+    border: 1px solid black;
+
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+p a {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: black;
+}
+

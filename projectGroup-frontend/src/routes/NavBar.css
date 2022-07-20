@@ -1,0 +1,17 @@
+.nav {
+    justify-content: center;
+    background-color: rgb(57, 56, 56);
+}
+ul {
+    list-style-type: none;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    margin: 0 30px;
+    float: left;
+}
