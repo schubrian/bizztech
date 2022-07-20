@@ -35,6 +35,12 @@ const SignUp = ()=>{
 
     const submitHandler = async(event) =>{
         event.preventDefault();
+        if (passwordCheck !== password) {
+            alert("WRONG PASSWORD")
+            navigate('/sign-up')
+            setPassword("")
+            setPasswordCheck("")
+        } else {
         var axios = require('axios');
         var data = JSON.stringify({
           "email": email,
@@ -68,7 +74,7 @@ const SignUp = ()=>{
         setLastName("")
         setEmail("")
         setPassword("")
-        setPasswordCheck("")
+        setPasswordCheck("")}
     }
 
     return(

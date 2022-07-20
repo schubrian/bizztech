@@ -43,20 +43,35 @@ const Login =(props) =>{
 
     const onSubmit = async(e) => {
         e.preventDefault()
-        const user = {email, password};
-        const response = await axios.post("http://localhost:1090/login", user);
-        console.log("On login: ", response.data);
-        setUser(response.data.token)
-        setUsername(response.data.user.firstName)
-        localStorage.setItem('user',response.data.token)
-        localStorage.setItem('username',response.data.user.firstName)
-        if (user) {
-            props.submitHandler(response)
-            navigate('/') 
-        } else {
-            alert("Please create an account")
-        }
-       
+        try {
+            const user = {email, password};
+            const response = await axios.post("http://localhost:1090/login", user);
+            console.log("On login: ", response.data);
+            setUser(response.data.token)
+            setUsername(response.data.user.firstName)
+            localStorage.setItem('user',response.data.token)
+            localStorage.setItem('username',response.data.user.firstName)
+            if (user) {
+                props.submitHandler(response)
+                navigate('/') 
+            } else  {
+                alert("Please create an account") }
+            } catch (e){
+                console.log(e.response.data.code);
+                if(e.response.data.code === 999){
+                    alert("Please create an account")
+                } 
+                else if(e.response.data.code === 998){
+                    alert("Invalid email or password")
+                }
+                else if(e.response.data.code === 997){
+                    alert("Not all fields have been entered")
+                }
+                else{
+                    alert("Oops, something is wrong!!")
+                }
+                 
+            }
        
     }
     return(
